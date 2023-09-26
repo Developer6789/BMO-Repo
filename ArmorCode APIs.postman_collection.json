@@ -1,0 +1,3321 @@
+{
+	"info": {
+		"_postman_id": "a282b16f-482a-4159-b4d3-54ecb441dae9",
+		"name": "ArmorCode APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Query for Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{athena_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/product",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query for Product Copy 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/sub-product/elastic/short?name=lacework_test",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"sub-product",
+						"elastic",
+						"short"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "12275",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "lacework_test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query for Product Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/product/6847",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"product",
+						"6847"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All bu query for products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/all-bu-stats?environment=Production&riskScoreDate=2023-08-16",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"all-bu-stats"
+					],
+					"query": [
+						{
+							"key": "environment",
+							"value": "Production"
+						},
+						{
+							"key": "riskScoreDate",
+							"value": "2023-08-16"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Domains",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/api/discovery/domains",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"discovery",
+						"domains"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Healthcheck",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/appsec-tools/status-by-subProduct",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"appsec-tools",
+						"status-by-subProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product elastic",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/product/elastic",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"product",
+						"elastic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BU",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/business-units/",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"business-units",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"classType\": \"Software only\",\n  \"status\": \"Active\",\n  \"type\": {\n    \"id\": 1\n  },\n  \"publicCloud\": true,\n  \"internetFacing\": true,\n  \"complianceRequired\": true,\n  \"confidentialityRequirement\": \"Not Defined\",\n  \"availabilityRequirement\": \"Low\",\n  \"availability\": \"None\",\n  \"attackingVector\": \"Network\",\n  \"name\": \"New App Name\",\n  \"description\": \"new app description\",\n  \"tags\": [\n    \"new test:update\"\n  ],\n  \"slaTemplateId\": null,\n  \"confidentiality\": \"NONE\",\n  \"confidentialityOptions\": \"\"\n        }\n"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/product",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Scan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"product\": \"test\",\n  \"subProduct\": \"brokencrystals\",\n  \"environment\": \"Production\",\n  \"tools\": \"Custom-test\",\n  \"fileName\": \"findings.csv\",\n  \"uploadTimezone\": \"America/Los_Angeles\",\n  \"scanTool\": \"Custom-test\",\n  \"env\": \"Production\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/client/utils/scan/upload",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"client",
+						"utils",
+						"scan",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Finding",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"environment\": \"Production\",\n  \"fileName\": \"finding.json\",\n  \"product\": 7017,\n  \"subProduct\": 47451,\n  \"armorcodeProjects\": [\n    1106\n  ],\n  \"tools\": \"Custom-Name\",\n  \"uploadTimezone\": \"America/Los_Angeles\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations/CUSTOM/upload",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations",
+						"CUSTOM",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Finding Template",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"configType\": \"MANUAL_FINDING_TEMPLATE\",\n    \"data\":\n    {\n        \"name\": \"test Name\",\n        \"template\":\n        {\n            \"title\": \"test Summary\",\n            \"description\": \"test Description\",\n            \"stepsToReproduce\": \"test to Reproduce\",\n            \"mitigation\": \"test Mitigation\",\n            \"impact\": \"test Impact\",\n            \"severity\": \"CRITICAL\",\n            \"scanType\": \"SCA\",\n            \"testType\": \"Vulnerability\",\n            \"cwe\": \"1004\",\n            \"cve\": \"CVE-2003-0001\",\n            \"cvssVector\": \"CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:L/I:L/A:L\",\n            \"cvssScore\": 5.1,\n            \"additionalFields\": null\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/tenant-config/MANUAL_FINDING_TEMPLATE",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"tenant-config",
+						"MANUAL_FINDING_TEMPLATE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Finding Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"environment\": \"Production\",\n  \"fileName\": \"custom.json\",\n  \"product\": 13222,\n  \"subProduct\": 61689,\n  \"armorcodeProjects\": [\n    1403\n  ],\n  \"tools\": \"CUSTOM\",\n  \"uploadTimezone\": \"America/Los_Angeles\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations/CUSTOM/upload",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations",
+						"CUSTOM",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product Copy 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"classType\": \"Software only\",\n  \"status\": \"Active\",\n  \"type\": {\n    \"id\": 1\n  },\n  \"publicCloud\": true,\n  \"internetFacing\": true,\n  \"complianceRequired\": true,\n  \"confidentialityRequirement\": \"Not Defined\",\n  \"availabilityRequirement\": \"Low\",\n  \"availability\": \"None\",\n  \"attackingVector\": \"Network\",\n  \"name\": \"New App Name\",\n  \"description\": \"new app description\",\n  \"tags\": [\n    \"new test:update\"\n  ],\n  \"slaTemplateId\": null,\n  \"confidentiality\": \"NONE\",\n  \"confidentialityOptions\": \"\"\n        }\n"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/product",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kick off runbook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"classType\": \"Software only\",\n  \"status\": \"Active\",\n  \"type\": {\n    \"id\": 1\n  },\n  \"publicCloud\": true,\n  \"internetFacing\": true,\n  \"complianceRequired\": true,\n  \"confidentialityRequirement\": \"Not Defined\",\n  \"availabilityRequirement\": \"Low\",\n  \"availability\": \"None\",\n  \"attackingVector\": \"Network\",\n  \"name\": \"New App Name\",\n  \"description\": \"new app description\",\n  \"tags\": [\n    \"new test:update\"\n  ],\n  \"slaTemplateId\": null,\n  \"confidentiality\": \"NONE\",\n  \"confidentialityOptions\": \"\"\n        }\n"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/runbook/3768/run-now",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"runbook",
+						"3768",
+						"run-now"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Runbooks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/api/runbook",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"runbook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a runbook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"inputs\": [\n    {\n      \"type\": \"list\",\n      \"label\": \"Scheduled Finding Search\",\n      \"nodeType\": \"trigger\",\n      \"name\": \"findingReport\",\n      \"id\": \"findingReport\",\n      \"nodeWidth\": 280\n    }\n  ],\n  \"enabled\": false,\n  \"applyOnExistingData\": false,\n  \"cron\": \"0 0 7 ? * 1,2,3,4,5,6,7\",\n  \"tasks\": [\n    {\n      \"name\": \"filteredFindings\",\n      \"type\": \"findings/filter\",\n      \"label\": \"Finding\",\n      \"nodeType\": \"filter\",\n      \"findings\": \"${findingReport}\",\n      \"filters\": [\n        {\n          \"key\": \"newUrl\",\n          \"operation\": \"MATCHES\",\n          \"value\": \"https://test.com\"\n        }\n      ]\n    },\n    {\n      \"name\": \"updateSeverity\",\n      \"type\": \"findings/update\",\n      \"label\": \"Update Finding\",\n      \"nodeType\": \"updateSeverity\",\n      \"findings\": \"${filteredFindings}\",\n      \"config\": {\n        \"addFindingTags\": [\n          \"url:https://test.com\"\n        ]\n      }\n    },\n    {\n      \"name\": \"moveFindings\",\n      \"type\": \"findings/move\",\n      \"label\": \"Move Finding\",\n      \"nodeType\": \"moveFindings\",\n      \"findings\": \"${filteredFindings}\",\n      \"config\": {\n        \"apId\": \"7694\",\n        \"aspId\": \"36911\",\n        \"aeId\": 72712\n      }\n    }\n  ],\n  \"timeZone\": \"America/Los_Angeles\",\n  \"label\": \"davis_test\",\n  \"type\": \"FINDING_SCHEDULE_REPORT\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/runbook",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"runbook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Runbooks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 4504,\n  \"tenant\": 185,\n  \"businessUnitId\": 656,\n  \"label\": \"mayank\",\n  \"err\": null,\n  \"tasks\": [\n    {\n      \"name\": \"filteredAsset\",\n      \"type\": \"tool/filter\",\n      \"label\": \"Filter\",\n      \"nodeType\": \"toolMappingFilter\",\n      \"toolMapping\": \"${toolMapping}\",\n      \"config\": {\n        \"type\": \"project\",\n        \"regex\": \"test2\",\n        \"source\": \"Snyk\"\n      }\n    },\n    {\n      \"name\": \"toolImageMapping\",\n      \"type\": \"tool/imageMapping\",\n      \"label\": \"Asset Mapping\",\n      \"nodeType\": \"toolImageMapping\",\n      \"toolMapping\": \"${filteredAsset}\",\n      \"config\": {\n        \"product\": 7694,\n        \"subProductAction\": \"newSubProductNameRegx\",\n        \"newSubProductNameRegx\": \"test2\",\n        \"newSubProductDescription\": \"test\",\n        \"environment\": \"Production\",\n        \"createNewSubProduct\": true\n      }\n    }\n  ],\n  \"inputs\": [\n    {\n      \"id\": \"toolMapping\",\n      \"name\": \"toolMapping\",\n      \"type\": \"list\",\n      \"label\": \"New Asset Discovered\",\n      \"nodeType\": \"trigger\"\n    }\n  ],\n  \"outputs\": null,\n  \"retry\": 0,\n  \"enabled\": false,\n  \"applyOnExistingData\": false,\n  \"type\": \"TOOL_IMAGE_MAPPING\",\n  \"lastExecutedAt\": null,\n  \"cron\": null,\n  \"childRunbooks\": [],\n  \"child\": true,\n  \"timeZone\": \"America/Los_Angeles\",\n  \"executionCount\": 0,\n  \"executionCountWithFilterOutput\": 0,\n  \"executeOnFirstScan\": false,\n  \"status\": null,\n  \"lastExecutionStatus\": null,\n  \"errorMessage\": null,\n  \"failedTasks\": {},\n  \"error\": null,\n  \"published\": true,\n  \"deleted\": false\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/runbook/4504",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"runbook",
+						"4504"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"NewProjectTest\",\n  \"type\": \"Security Testing\",\n  \"description\": \"NewProject Description\",\n  \"status\": \"Not Started\",\n  \"notes\": \"test notes\",\n  \"businessOwner\": {\n    \"id\": 1982\n  },\n  \"securityOwner\": {\n    \"id\": 1982\n  },\n  \"engineeringOwner\": {\n    \"id\": 1982\n  },\n  \"supportOwner\": {\n    \"id\": 1982\n  },\n  \"complianceOwner\": {\n    \"id\": 1982\n  }\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/project",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Team",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"testTeamB\",\n  \"tags\": [\n    \"test\"\n  ],\n  \"description\": \"\",\n  \"members\": [],\n  \"properties\": [\n    {\n      \"businessUnitId\": 656,\n      \"businessUnitName\": \"Default Business Unit\",\n      \"productSubProductMap\": [\n        {\n          \"product\": 6759,\n          \"subProduct\": [\n            22223,\n            22222\n          ],\n          \"accessOnAllSubProdcut\": false\n        }\n      ]\n    }\n  ],\n  \"emailAlias\": \"\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/team",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Team",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"testTeamA\",\n  \"tags\": [],\n  \"description\": \"\",\n  \"members\": [\n    {\n      \"user\": {\n        \"id\": 1662\n      },\n      \"role\": \"Developer\",\n      \"disableLogin\": false\n    }\n  ],\n  \"properties\": [\n    {\n      \"businessUnitId\": 656,\n      \"businessUnitName\": \"Default Business Unit\",\n      \"productSubProductMap\": [\n        {\n          \"product\": 6918,\n          \"subProduct\": [\n            23096,\n            24373,\n            24374\n          ],\n          \"accessOnAllSubProdcut\": false\n        }\n      ],\n      \"accessOnAllProduct\": false,\n      \"members\": []\n    }\n  ],\n  \"emailAlias\": \"\",\n  \"msTeamsLoginId\": null,\n  \"msTeamsChannel\": [],\n  \"accessOnAllBusinessUnits\": false,\n  \"id\": 2075\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/team/with-user",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"team",
+						"with-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Team Copy 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"testTeamA\",\n  \"tags\": [],\n  \"description\": \"\",\n  \"members\": [\n    {\n      \"user\": {\n        \"id\": 1662\n      },\n      \"role\": \"Developer\",\n      \"disableLogin\": false\n    }\n  ],\n  \"properties\": [\n    {\n      \"businessUnitId\": 656,\n      \"businessUnitName\": \"Default Business Unit\",\n      \"productSubProductMap\": [\n        {\n          \"product\": 6918,\n          \"subProduct\": [\n            23096,\n            24373,\n            24374\n          ],\n          \"accessOnAllSubProdcut\": false\n        }\n      ],\n      \"accessOnAllProduct\": false,\n      \"members\": []\n    }\n  ],\n  \"emailAlias\": \"\",\n  \"msTeamsLoginId\": null,\n  \"msTeamsChannel\": [],\n  \"accessOnAllBusinessUnits\": false,\n  \"id\": 2075\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/team/with-user",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"team",
+						"with-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Team Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"testTeamA\",\n  \"tags\": [],\n  \"description\": \"\",\n  \"members\": [\n      {\n      \"userId\": 4530,\n      \"email\": \"davis.barillas@gmail.com\",\n      \"role\": \"Developer\"\n      }\n  ],\n  \"properties\": [\n    {\n      \"businessUnitId\": 656,\n      \"businessUnitName\": \"Default Business Unit\",\n      \"productSubProductMap\": [\n        {\n          \"product\": 6918,\n          \"subProduct\": [\n            23096,\n            24373,\n            24374\n          ],\n          \"accessOnAllSubProdcut\": false\n        }\n      ],\n      \"accessOnAllProduct\": false,\n      \"members\": []\n    }\n  ],\n  \"emailAlias\": \"\",\n  \"accessOnAllBusinessUnits\": false,\n  \"id\": 2075\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/team",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Team",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/api/team/2074",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"team",
+						"2074"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teams",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/api/team/all-teams",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"team",
+						"all-teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/project/1107",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"project",
+						"1107"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/data/users",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"data",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User Tenant Wide",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"Jason.Lawrence@armorcode.io\",\n  \"disableLogin\": false,\n  \"tenantRole\": \"Read Only\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/add/user",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"add",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User Team Scope",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"andrushka.n@gmail.com\",\n  \"disableLogin\": false,\n  \"teamInfo\": [\n    {\n      \"teamName\": \"testTeamA\",\n      \"teamId\": 2075,\n      \"properties\": [],\n      \"role\": \"Developer\",\n      \"canBeModified\": true\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/add/user",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"add",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User with Team Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"Jason.Lawrence@armorcode.io\",\n  \"disableLogin\": false,\n  \"teamInfo\": [\n    {\n      \"teamName\": \"CSM\",\n      \"teamId\": 1159,\n      \"properties\": [],\n      \"role\": \"Developer\",\n      \"canBeModified\": true\n    }\n  ],\n  \"id\": 1685\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/update/user",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"update",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"wodam@armorcode.io\",\n  \"disableLogin\": true,\n  \"tenantRole\": \"Developer\",\n  \"id\": 2001,\n  \"teamInfo\": null\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/update/user",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"update",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/project/1107",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"project",
+						"1107"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create SubProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "businessUnitId",
+						"value": "960",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"environments\": [\n    {\n      \"name\": \"Production\",\n      \"branch\": \"master\"\n    },\n    {\n      \"name\": \"Staging\",\n      \"branch\": \"master\"\n    }\n  ],\n  \"engineeringOwner\": null,\n  \"securityOwner\": null,\n  \"businessOwner\": null,\n  \"complianceOwner\": null,\n  \"supportOwner\": null,\n  \"confidentialityRequirement\": \"Not Defined\",\n  \"availabilityRequirement\": \"Low\",\n  \"availability\": \"None\",\n  \"attackingVector\": \"Network\",\n  \"publicCloud\": true,\n  \"internetFacing\": true,\n  \"product\": {\n    \"id\": 5067\n  },\n  \"name\": \"Testing cross BU\",\n  \"description\": \"dscfgbhj\",\n  \"types\": [],\n  \"tags\": [\n    \"test 123:usydgew766\"\n  ],\n  \"programmingLanguage\": \"\",\n  \"technologies\": \"\",\n  \"slaTemplateId\": null,\n  \"confidentiality\": \"NONE\",\n  \"confidentialityOptions\": \"\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/sub-product",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"sub-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create API key",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "businessUnitId",
+						"value": "960",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"expiry\": null,\n  \"role\": 459,\n  \"name\": \"test12345678\",\n  \"apiTokenType\": \"USER\",\n  \"productIds\": [],\n  \"accessOnAllProducts\": true\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/apikey",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"apikey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create SubProduct Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "businessUnitId",
+						"value": "960",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"environments\": [\n    {\n      \"name\": \"Production\",\n      \"branch\": \"master\",\n      \"url\": \"\"\n    },\n    {\n      \"name\": \"Staging\",\n      \"branch\": \"master\",\n      \"url\": \"\"\n    }\n  ],\n  \"confidentialityRequirement\": \"High\",\n  \"availabilityRequirement\": \"High\",\n  \"availability\": \"High\",\n  \"attackingVector\": \"Network\",\n  \"publicCloud\": true,\n  \"internetFacing\": true,\n  \"product\": {\n    \"id\": 7694\n  },\n  \"name\": \"newSubP\",\n  \"types\": [],\n  \"programmingLanguage\": \"\",\n  \"technologies\": \"\",\n  \"confidentiality\": \"NONE\",\n  \"confidentialityOptions\": \"\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/sub-product",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"sub-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Map product/subproducts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"websiteId\": \"e556a72a-79dd-4bcb-9d1e-af4a01eb66d8\",\n    \"websiteName\": \"e\",\n    \"websiteUrl\": \"https://e-consent.mssm.edu/\",\n    \"product_name\": \"DavisTest\",\n    \"sub_product_name\": \"DavisTestSubProduct\",\n    \"environment\": \"Production\",\n    \"tool_name\": \"Acunetix\",\n    \"tag\": \"sample\",\n    \"version\": \"1\",\n    \"login_id\": 3313,\n    \"toolType\": \"PULL\"\n  }\n]"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Map product/subproducts Copy 3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"websiteId\": \"e556a72a-79dd-4bcb-9d1e-af4a01eb66d8\",\n    \"websiteName\": \"e\",\n    \"websiteUrl\": \"https://e-consent.mssm.edu/\",\n    \"product_name\": \"DavisTest\",\n    \"sub_product_name\": \"DavisTestSubProduct\",\n    \"environment\": \"Production\",\n    \"tool_name\": \"Acunetix\",\n    \"tag\": \"sample\",\n    \"version\": \"1\",\n    \"login_id\": 3313,\n    \"toolType\": \"PULL\"\n  }\n]"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Map product/subproducts Copy 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n  \"projectId\": \"229\",\n  \"projectName\": \"Juiceshop\",\n  \"product_name\": \"juiceshop\",\n  \"sub_product_name\": \"juiceshop\",\n  \"environment\": \"Production\",\n  \"tool_name\": \"Checkmarx\",\n  \"tag\": \"sample\",\n  \"version\": \"1\",\n  \"login_id\": 3939,\n  \"toolType\": \"PULL\"\n}]\n"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Map Snyk Product/Subproduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"projectId\": \"123\",\n    \"projectName\": \"123\",\n    \"orgId\": \"123\",\n    \"orgName\": \"DX\",\n    \"exploitMaturity\": [],\n    \"product_name\": \"123urity-na\",\n    \"sub_product_name\": \"123-cert-issuer\",\n    \"environment\": \"Production\",\n    \"tool_name\": \"Snyk\",\n    \"tag\": \"sample\",\n    \"version\": \"1\",\n    \"login_id\": 5405,\n    \"toolType\": \"PULL\"\n  }\n]"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Login ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/login_details/snyk",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"login_details",
+						"snyk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Map Jira Config",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"product\": 7018,\n  \"projectKey\": \"TEST\",\n  \"issueType\": \"Task\",\n  \"enabled\": true,\n  \"properties\": {\n    \"critical\": \"Highest\",\n    \"high\": \"High\",\n    \"medium\": \"Medium\",\n    \"low\": \"Low\",\n    \"info\": \"Lowest\"\n  },\n  \"ticketSystemType\": \"JIRA\",\n  \"loginConfigId\": 3089,\n  \"configurationType\": \"PRODUCT\",\n  \"customFields\": []\n}\n\n"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tickets/jira/configuration",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tickets",
+						"jira",
+						"configuration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Map OKTA SCIM GROUP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"apiToken\": \"1231231231231231231231231231\",\n  \"oktaGroupRoleMappingDtos\": [\n    {\n      \"teamId\": 2075,\n      \"oktaGroup\": \"test\",\n      \"armorCodeRole\": \"Read Only\"\n    }\n  ],\n  \"grmHostUrl\": null,\n  \"type\": \"SCIM\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/oktaConfiguration/team/mapping",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"oktaConfiguration",
+						"team",
+						"mapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Jira Config",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"loginType\": \"TOKEN\",\n  \"name\": \"testings2\",\n  \"url\": \"https://davistest.atlassian.net\",\n  \"email\": \"123@gmail.com\",\n  \"apiToken\": \"1234\",\n  \"version\": \"V3\",\n  \"ticketSystemType\": \"JIRA\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tickets/jira/configuration/login/JIRA",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tickets",
+						"jira",
+						"configuration",
+						"login",
+						"JIRA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SECURITY TOOL CONFIG",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"page\": 0,\n  \"size\": 200,\n  \"sort\": \"createdAt,desc\",\n  \"sortOrder\": \"desc\",\n  \"sortColumn\": \"createdAt\",\n  \"filters\": {},\n  \"toolType\": \"PULL\",\n  \"loginId\": 3355,\n  \"toolFilters\": {}\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations/WhiteHat%20Sentinel",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations",
+						"WhiteHat%20Sentinel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Jira Login Config ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/tickets/jira/configuration/login/JIRA",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tickets",
+						"jira",
+						"configuration",
+						"login",
+						"JIRA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Security Tool Config",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations/ShiftLeft/project?login_id=4962",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations",
+						"ShiftLeft",
+						"project"
+					],
+					"query": [
+						{
+							"key": "login_id",
+							"value": "4962"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lacework Projects",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations/Lacework/project?login_id=6629",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations",
+						"Lacework",
+						"project"
+					],
+					"query": [
+						{
+							"key": "login_id",
+							"value": "6629"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Lacework Mapping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"account\": \"ARMORCODEALLIANCE\",\n    \"cloudAccountName\": \"fluted-harmony-326907,fluted-harmony-326907,fluted-harmony-326907,fluted-harmony-326907\",\n    \"cloudAccountId\": \"fluted-harmony-326907\",\n    \"cloudRegistryId\": null,\n    \"cloudRegistryName\": null,\n    \"product_name\": \"fluted-harmony-326907\",\n    \"sub_product_name\": \"test\",\n    \"environment\": \"Production\",\n    \"tool_name\": \"Lacework\",\n    \"tag\": \"sample\",\n    \"version\": \"1\",\n    \"login_id\": 6629,\n    \"toolType\": \"PULL\"\n  }\n]"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Lacework Mapping Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"projectToken\": \"14c3fa5da8d74ad2bd28a657f67593cbfd83b21cf0d04505abc1c8f108812a02\",\n        \"projectName\": \"Bitbucket_All_Repositories_Aug2023/ANML_aws-cloudformation\",\n        \"productToken\": \"c479cd80ceca4d0185835a8f30e7168c9fb945b2937c4bd5908452fc0f05828e\",\n        \"productName\": \"Bitbucket_All_Repositories_Aug2023\",\n        \"product_name\": \"Data Science\",\n        \"sub_product_name\": \"Machine Learning Operations (MLOps)\",\n        \"environment\": \"Production\",\n        \"tool_name\": \"Mend\",\n        \"tag\": \"sample\",\n        \"version\": \"1\",\n        \"login_id\": 9554,\n        \"toolType\": \"PULL\"\n    }\n]"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Netsparker Mapping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"account\": \"ARMORCODEALLIANCE\",\n    \"cloudAccountName\": \"fluted-harmony-326907,fluted-harmony-326907,fluted-harmony-326907,fluted-harmony-326907\",\n    \"cloudAccountId\": \"fluted-harmony-326907\",\n    \"cloudRegistryId\": null,\n    \"cloudRegistryName\": null,\n    \"product_name\": \"fluted-harmony-326907\",\n    \"sub_product_name\": \"test\",\n    \"environment\": \"Production\",\n    \"tool_name\": \"Lacework\",\n    \"tag\": \"sample\",\n    \"version\": \"1\",\n    \"login_id\": 6629,\n    \"toolType\": \"PULL\"\n  }\n]"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NexusIQ Mapping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{equinix_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"applicationId\": \"a19f23649830477c8b8f3383fb7df9ed\",\n        \"applicationName\": \"account-service-ui\",\n        \"product_name\": \"Equinix Customer Portal (ECP)\",\n        \"sub_product_name\": \"account-service-ui\",\n        \"environment\": \"Production\",\n        \"tool_name\": \"Nexus Lifecycle\",\n        \"tag\": \"sample\",\n        \"version\": \"1\",\n        \"login_id\": 9259,\n        \"toolType\": \"PULL\"\n    }\n]"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiple Lacework Mapping Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"account\": \"ARMORCODEALLIANCE\",\n    \"cloudAccountName\": \"673a1ce2-93e5-42e4-950f-9871015d7367,sys-70485049479873850010373839\",\n    \"cloudAccountId\": \"673a1ce2-93e5-42e4-950f-9871015d7367,sys-70485049479873850010373839\",\n    \"cloudRegistryId\": null,\n    \"cloudRegistryName\": null,\n    \"product_name\": \"Lacework\",\n    \"sub_product_name\": \"Lacework\",\n    \"environment\": \"Production\",\n    \"tool_name\": \"Lacework\",\n    \"tag\": \"sample\",\n    \"version\": \"1\",\n    \"login_id\": 6629,\n    \"toolType\": \"PULL\"\n  }\n]"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Findings Stats All",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"page\": 0,\n  \"size\": 100,\n  \"sort\": \"severity,descend\",\n  \"sortOrder\": \"desc\",\n  \"sortColumn\": \"severity\",\n  \"sortColumns\": [\n    {\n      \"property\": \"severity\",\n      \"direction\": \"desc\"\n    }\n  ],\n  \"filters\": {\n    \"status\": [\n      \"OPEN\"\n    ],\n    \"toolId\": [\n      \"SNYK-JAVA-ORGCODEHAUSPLEXUS-31522\"\n    ],\n    \"keyValue\": [\n      {\n        \"key\": \"key\",\n        \"value\":\"dev\"\n      }\n    ]\n  },\n  \"ticketStatusRequired\": true,\n  \"ignoreMitigated\": null,\n  \"ignoreDuplicate\": true\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/findingStats/all",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						"findingStats",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Findings Stats All Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"page\": 0,\n  \"size\": 100,\n  \"sort\": \"severity,descend\",\n  \"sortOrder\": \"desc\",\n  \"sortColumn\": \"severity\",\n  \"sortColumns\": [\n    {\n      \"property\": \"severity\",\n      \"direction\": \"desc\"\n    }\n  ],\n  \"filters\": {\n    \"status\": [\n      \"OPEN\"\n    ]\n  },\n  \"ticketStatusRequired\": true,\n  \"ignoreMitigated\": null,\n  \"ignoreDuplicate\": true\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/findingStats/all",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						"findingStats",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Findings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Findings All with ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"page\": 0,\n  \"size\": 10000,\n  \"sort\": \"\",\n  \"sortColumns\": [],\n  \"filters\": {\n    \"id\": [\n      \"173631912\"\n    ]\n  },\n  \"ticketStatusRequired\": true,\n  \"ignoreMitigated\": null,\n  \"ignoreDuplicate\": true\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Findings All with ID Copy 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"page\": 0,\n  \"size\": 10000,\n  \"sort\": \"\",\n  \"sortColumns\": [],\n  \"filters\": {\n    \"id\": [\n      \"173631912\"\n    ]\n  },\n  \"ticketStatusRequired\": true,\n  \"ignoreMitigated\": null,\n  \"ignoreDuplicate\": true\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get findings of a subproduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"page\": 0,\n  \"size\": 10000,\n  \"sort\": \"\",\n  \"sortColumns\": [],\n  \"filters\": {\n    \"status\": [\n      \"OPEN\",\n      \"ACCEPTRISK\",\n      \"CONFIRMED\"\n    ],\n    \"subProduct\": [\n      56927\n    ]\n  },\n  \"ticketStatusRequired\": true,\n  \"ignoreMitigated\": null,\n  \"ignoreDuplicate\": true\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"note\": \"<p>hello world</p>\",\n  \"markdownText\": \"hi\",\n  \"userIds\": [],\n  \"attachments\": []\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/173631912/comment",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						"173631912",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/173631912/comment",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						"173631912",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Finding ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/173631912",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						"173631912"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Subproduct ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/sub-product/elastic",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"sub-product",
+						"elastic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Unmapped Snyk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/discovery/projects?page=0&size=100&sources=Snyk&mappedState=FALSE",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"discovery",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						},
+						{
+							"key": "sources",
+							"value": "Snyk"
+						},
+						{
+							"key": "mappedState",
+							"value": "FALSE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Subproduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 47452,\n  \"name\": \"linish9\",\n  \"description\": \"test\",\n  \"product\": {\n    \"id\": 7017\n  },\n  \"publicCloud\": true,\n  \"internetFacing\": true,\n  \"tags\": [\n      \"keytest:valuetest\"\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/sub-product",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"sub-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Subproduct Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 47452,\n  \"name\": \"linish9\",\n  \"description\": \"test\",\n  \"product\": {\n    \"id\": 7017\n  },\n  \"tags\": [\n      \"keytest:valuetest\"\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/api/sub-product",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"sub-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Finding",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"note\": \"test2\",\n  \"scope\": \"FINDING\",\n  \"findingId\": 130207511,\n  \"updateType\": \"RULE_BASED\",\n  \"contains\": false,\n  \"equals\": true,\n  \"status\": \"CONFIRMED\",\n  \"notes\": \"test2\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/130207511",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						"130207511"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Tag to finding",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"findingTags\": [\n    \"test:test\"\n  ],\n  \"findingIds\": [\n    130909982\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/findingTags",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						"findingTags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "False Positive Finding",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"note\": \"legacy\",\n  \"scope\": \"FINDING\",\n  \"findingId\": 130207511,\n  \"updateType\": \"RULE_BASED\",\n  \"contains\": false,\n  \"equals\": true,\n  \"status\": \"FALSEPOSITIVE\",\n  \"notes\": \"legacy\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/false-positive/130207511",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						"false-positive",
+						"130207511"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Supress Finding - Accept Risk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"reason\": \"Not security related issue\",\n  \"unsupress\": false,\n  \"notes\": \"test\",\n  \"scope\": \"FINDING\",\n  \"findingId\": 130207511,\n  \"updateType\": \"RULE_BASED\",\n  \"contains\": false,\n  \"equals\": true,\n  \"status\": \"ACCEPTRISK\"\n}"
+				},
+				"url": {
+					"raw": "https://app.armorcode.com/user/findings/accept-risk/130207511",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"findings",
+						"accept-risk",
+						"130207511"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Map product/subproducts Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.armorcode.com/user/tools/generic/configurations/Checkmarx/project?login_id=3939",
+					"protocol": "https",
+					"host": [
+						"app",
+						"armorcode",
+						"com"
+					],
+					"path": [
+						"user",
+						"tools",
+						"generic",
+						"configurations",
+						"Checkmarx",
+						"project"
+					],
+					"query": [
+						{
+							"key": "login_id",
+							"value": "3939"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
